@@ -7,6 +7,6 @@ app.get('/', (req, res) => {
   res.send('Home Page');
 });
 
-app.listen(80, () => {
+app.listen(3000, () => {
   console.log('listening on port 8000');
 });
