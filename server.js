@@ -4,7 +4,7 @@ const app = express();
 
 app.get('/', (req, res) => {
   console.log('Visitor to home route:');
-  res.send('Home Page');
+  res.send('anotherlike.me');
 });
 
 app.listen(PORT, () => {
