@@ -9,7 +9,7 @@ app.use(express.static(__dirname + "/client_files"));
 
 app.get('/', (req, res) => {
   console.log('Visitor to home route:');
-  res.send('anotherlike.me');
+  res.sendFile(__dirname + '/client_files/index.html');
 });
 
 io.attach(server);
