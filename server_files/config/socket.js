@@ -4,7 +4,12 @@ io.on('connection', function(socket) {
   console.log('a user connected to anotherlike.me websocket server');
 
   socket.on("subscribe", room => {
+    console.log(`${socket.id} has joined ${room}`);
     socket.join(room);
+  })
+
+  socket.on("ping", () => {
+    socket.emit("message", "pong");
   })
 
   socket.on("to room", ({
@@ -12,7 +17,6 @@ io.on('connection', function(socket) {
     type,
     data
   }) => {
-    console.log(`${socket.id} has joined ${room}`);
     io.to(room).emit(type, data);
   })
 
