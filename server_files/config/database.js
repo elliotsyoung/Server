@@ -9,7 +9,7 @@ if (process.env.DEV === "true") {
   });
 } else {
   console.log("In production mode, connecting to digitalocean MongoDB instance");
-  mongoose.connect(`mongodb://admin:${keys.mongodbpassword}@localhost:27017/anotherlikeme`, {
+  mongoose.connect(`mongodb://admin:${keys.mongodbpassword}@localhost:27017/FPAL_TA_DB`, {
     useNewUrlParser: true
   });
 }
